@@ -3,6 +3,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
+import { createNotification } from "../../notifications-actions";
 
 const feedbackSchema = z.object({
   submissionId: z.string().uuid(),
@@ -101,6 +102,26 @@ export async function submitFeedback(data: FeedbackInput) {
     console.error("Error updating status:", updateError);
     // Non-critical - feedback was saved
   }
+
+  // Trigger Notification
+  const { data: teacher } = await supabase
+    .from("users")
+    .select("full_name")
+    .eq("id", user.id)
+    .single();
+
+  const { data: assignmentDetails } = await supabase
+    .from("assignments")
+    .select("title")
+    .eq("id", submission.assignment_id)
+    .single();
+
+  await createNotification(submission.student_id, {
+    type: "feedback",
+    title: "New Feedback Received",
+    content: `${teacher?.full_name || "Your teacher"} provided feedback on "${assignmentDetails?.title || "your assignment"}".`,
+    link: "/dashboard/feedback",
+  });
 
   revalidatePath(`/dashboard/submissions/${submissionId}`);
   revalidatePath("/dashboard/submissions");

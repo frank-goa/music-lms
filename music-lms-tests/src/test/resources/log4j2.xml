@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Log4j2 Configuration for MusicLMS Test Framework -->
+<Configuration status="WARN">
+
+    <!-- Properties for reusable values -->
+    <Properties>
+        <Property name="LOG_PATTERN">
+            %d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %c{1} - %m%n
+        </Property>
+        <Property name="LOG_FILE">./logs/test-automation.log</Property>
+    </Properties>
+
+    <!-- Appenders define WHERE logs go -->
+    <Appenders>
+
+        <!-- Console Appender: Outputs to command line -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+
+        <!-- File Appender: Writes to a file -->
+        <File name="File" fileName="${LOG_FILE}" append="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </File>
+
+        <!-- Rolling File: Creates new files based on size/date -->
+        <RollingFile name="RollingFile"
+                     fileName="./logs/automation.log"
+                     filePattern="./logs/automation-%d{yyyy-MM-dd}-%i.log">
+
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+
+    </Appenders>
+
+    <!-- Loggers define WHAT gets logged -->
+    <Loggers>
+
+        <!-- Root logger: Default for everything -->
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingFile"/>
+        </Root>
+
+        <!-- Test classes: DEBUG level for detailed info -->
+        <Logger name="testCases" level="DEBUG" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingFile"/>
+        </Logger>
+
+        <!-- Page objects: INFO level -->
+        <Logger name="pageObjects" level="INFO" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingFile"/>
+        </Logger>
+
+        <!-- Selenium: WARN level to reduce noise -->
+        <Logger name="org.openqa.selenium" level="WARN" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+    </Loggers>
+
+</Configuration>

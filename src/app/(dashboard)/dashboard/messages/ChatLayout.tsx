@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { ChatWindow } from './ChatWindow';
@@ -21,7 +21,7 @@ interface ChatLayoutProps {
 export function ChatLayout({ contacts, currentUser }: ChatLayoutProps) {
   const [selectedContact, setSelectedContact] = useState<User | null>(contacts.length > 0 ? contacts[0] : null);
   const [messages, setMessages] = useState<any[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   // Load messages when contact changes
   const handleSelectContact = async (contact: User) => {
@@ -32,12 +32,15 @@ export function ChatLayout({ contacts, currentUser }: ChatLayoutProps) {
     setLoading(false);
   };
 
-  // Initial load
-  useState(() => {
+  // Initial load - use useEffect instead of useState
+  useEffect(() => {
     if (selectedContact) {
       handleSelectContact(selectedContact);
+    } else {
+      setLoading(false);
     }
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="grid md:grid-cols-[300px_1fr] h-[600px] gap-4">

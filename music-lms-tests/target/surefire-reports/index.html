@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 26 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-MusicLMS_Test_Suite" class="navigator-link">
+              <span class="suite-name border-failed">MusicLMS Test Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-MusicLMS_Test_Suite" class="navigator-link ">
+                    <span>testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-MusicLMS_Test_Suite" class="navigator-link ">
+                    <span class="test-stats">2 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-MusicLMS_Test_Suite" class="navigator-link ">
+                    <span>4 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-MusicLMS_Test_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-MusicLMS_Test_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-MusicLMS_Test_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-MusicLMS_Test_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">30 methods, 26 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-MusicLMS_Test_Suite" class="hide-methods failed suite-MusicLMS_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-MusicLMS_Test_Suite -->
+                      <a href="#" panel-name="suite-MusicLMS_Test_Suite" class="show-methods failed suite-MusicLMS_Test_Suite"> (show)</a> <!-- show-methods failed suite-MusicLMS_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-MusicLMS_Test_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_001_LoginTest" class="method navigator-link" hash-for-method="TC_Auth_001_VerifyLoginPageDisplay">TC_Auth_001_VerifyLoginPageDisplay</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_001_LoginTest" class="method navigator-link" hash-for-method="TC_Auth_002_VerifyValidLogin">TC_Auth_002_VerifyValidLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_001_LoginTest" class="method navigator-link" hash-for-method="TC_Auth_006_VerifySignupNavigation">TC_Auth_006_VerifySignupNavigation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_002_SignupTest" class="method navigator-link" hash-for-method="TC_Auth_008_VerifySignupPageDisplay">TC_Auth_008_VerifySignupPageDisplay</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_002_SignupTest" class="method navigator-link" hash-for-method="TC_Auth_009_VerifyValidTeacherSignup">TC_Auth_009_VerifyValidTeacherSignup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_002_SignupTest" class="method navigator-link" hash-for-method="TC_Auth_010_VerifyEmptyFieldsValidation">TC_Auth_010_VerifyEmptyFieldsValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_002_SignupTest" class="method navigator-link" hash-for-method="TC_Auth_011_VerifyShortPasswordValidation">TC_Auth_011_VerifyShortPasswordValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_002_SignupTest" class="method navigator-link" hash-for-method="TC_Auth_012_VerifyInvalidEmailValidation">TC_Auth_012_VerifyInvalidEmailValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_002_SignupTest" class="method navigator-link" hash-for-method="TC_Auth_013_VerifyLoginNavigation">TC_Auth_013_VerifyLoginNavigation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_002_SignupTest" class="method navigator-link" hash-for-method="TC_Auth_014_VerifyCreateAccountButtonState">TC_Auth_014_VerifyCreateAccountButtonState</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_002_SignupTest" class="method navigator-link" hash-for-method="TC_Auth_015_VerifyDuplicateEmailSignup">TC_Auth_015_VerifyDuplicateEmailSignup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_003_LoginDDT" class="method navigator-link" hash-for-method="TC_Auth_DDT_001_LoginWithMultipleCredentials">TC_Auth_DDT_001_LoginWithMultipleCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_003_LoginDDT" class="method navigator-link" hash-for-method="TC_Auth_DDT_002_PasswordValidation(P@ssw0rd!, true, Strong password)">TC_Auth_DDT_002_PasswordValidation(P@ssw0rd!, true, Strong password)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_003_LoginDDT" class="method navigator-link" hash-for-method="TC_Auth_DDT_002_PasswordValidation(, false, Empty password)">TC_Auth_DDT_002_PasswordValidation(, false, Empty password)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_003_LoginDDT" class="method navigator-link" hash-for-method="TC_Auth_DDT_002_PasswordValidation(123456, true, Minimum length (6 chars))">TC_Auth_DDT_002_PasswordValidation(123456, true, Minimum length (6 chars))</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_003_LoginDDT" class="method navigator-link" hash-for-method="TC_Auth_DDT_002_PasswordValidation(password, true, Valid length, no special chars)">TC_Auth_DDT_002_PasswordValidation(password, true, Valid length, no special chars)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_003_LoginDDT" class="method navigator-link" hash-for-method="TC_Auth_DDT_002_PasswordValidation(   , false, Whitespace only)">TC_Auth_DDT_002_PasswordValidation(   , false, Whitespace only)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_003_LoginDDT" class="method navigator-link" hash-for-method="TC_Auth_DDT_002_PasswordValidation(12345, false, Too short (less than 6 chars))">TC_Auth_DDT_002_PasswordValidation(12345, false, Too short (less than 6 chars))</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_003_LoginDDT" class="method navigator-link" hash-for-method="TC_Auth_DDT_003_EmailValidation(user@domain.com, true, Valid email)">TC_Auth_DDT_003_EmailValidation(user@domain.com, true, Valid email)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_003_LoginDDT" class="method navigator-link" hash-for-method="TC_Auth_DDT_003_EmailValidation(user@, false, Missing domain)">TC_Auth_DDT_003_EmailValidation(user@, false, Missing domain)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_003_LoginDDT" class="method navigator-link" hash-for-method="TC_Auth_DDT_003_EmailValidation(@domain.com, false, Missing local part)">TC_Auth_DDT_003_EmailValidation(@domain.com, false, Missing local part)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_003_LoginDDT" class="method navigator-link" hash-for-method="TC_Auth_DDT_003_EmailValidation(, false, Empty email)">TC_Auth_DDT_003_EmailValidation(, false, Empty email)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_003_LoginDDT" class="method navigator-link" hash-for-method="TC_Auth_DDT_003_EmailValidation(invalid-email, false, Missing @ and domain)">TC_Auth_DDT_003_EmailValidation(invalid-email, false, Missing @ and domain)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_003_LoginDDT" class="method navigator-link" hash-for-method="TC_Auth_DDT_003_EmailValidation(user@sub.domain.com, true, Email with subdomain)">TC_Auth_DDT_003_EmailValidation(user@sub.domain.com, true, Email with subdomain)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_003_LoginDDT" class="method navigator-link" hash-for-method="TC_Auth_DDT_003_EmailValidation(user.name@domain.com, true, Email with dot in local part)">TC_Auth_DDT_003_EmailValidation(user.name@domain.com, true, Email with dot in local part)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_003_LoginDDT" class="method navigator-link" hash-for-method="TC_Auth_DDT_003_EmailValidation(user@domain, false, Missing TLD)">TC_Auth_DDT_003_EmailValidation(user@domain, false, Missing TLD)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-MusicLMS_Test_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-MusicLMS_Test_Suite" class="hide-methods passed suite-MusicLMS_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-MusicLMS_Test_Suite -->
+                      <a href="#" panel-name="suite-MusicLMS_Test_Suite" class="show-methods passed suite-MusicLMS_Test_Suite"> (show)</a> <!-- show-methods passed suite-MusicLMS_Test_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-MusicLMS_Test_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_001_LoginTest" class="method navigator-link" hash-for-method="TC_Auth_003_VerifyInvalidPasswordLogin">TC_Auth_003_VerifyInvalidPasswordLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_001_LoginTest" class="method navigator-link" hash-for-method="TC_Auth_004_VerifyInvalidEmailLogin">TC_Auth_004_VerifyInvalidEmailLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_001_LoginTest" class="method navigator-link" hash-for-method="TC_Auth_005_VerifyEmptyFieldsValidation">TC_Auth_005_VerifyEmptyFieldsValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MusicLMS_Test_Suite" title="testCases.TC_Auth_001_LoginTest" class="method navigator-link" hash-for-method="TC_Auth_007_VerifyLoginButtonState">TC_Auth_007_VerifyLoginButtonState</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-MusicLMS_Test_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-MusicLMS_Test_Suite" class="panel MusicLMS_Test_Suite">
+          <div class="suite-MusicLMS_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.TC_Auth_003_LoginDDT</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_DDT_001_LoginWithMultipleCredentials">
+                  </a> <!-- TC_Auth_DDT_001_LoginWithMultipleCredentials -->
+                  <span class="method-name">TC_Auth_DDT_001_LoginWithMultipleCredentials</span>
+                  <div class="stack-trace">java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheet(String)&quot; because &quot;this.workbook&quot; is null
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheet(String)&quot; because &quot;this.workbook&quot; is null
+	at utilities.ExcelUtility.getRowCount(ExcelUtility.java:112)
+	at utilities.DataProviders.getLoginData(DataProviders.java:93)
+	... 29 more
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Data-driven login test with multiple credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_DDT_002_PasswordValidation(P@ssw0rd!, true, Strong password)">
+                  </a> <!-- TC_Auth_DDT_002_PasswordValidation(P@ssw0rd!, true, Strong password) -->
+                  <span class="method-name">TC_Auth_DDT_002_PasswordValidation</span>
+                  <span class="parameters">(P@ssw0rd!,true,Strong password)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.logging.log4j.Logger.info(String)&quot; because &quot;this.logger&quot; is null
+	at testCases.TC_Auth_003_LoginDDT.TC_Auth_DDT_002_PasswordValidation(TC_Auth_003_LoginDDT.java:183)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test various password validation scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_DDT_002_PasswordValidation(, false, Empty password)">
+                  </a> <!-- TC_Auth_DDT_002_PasswordValidation(, false, Empty password) -->
+                  <span class="method-name">TC_Auth_DDT_002_PasswordValidation</span>
+                  <span class="parameters">(,false,Empty password)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.logging.log4j.Logger.info(String)&quot; because &quot;this.logger&quot; is null
+	at testCases.TC_Auth_003_LoginDDT.TC_Auth_DDT_002_PasswordValidation(TC_Auth_003_LoginDDT.java:183)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test various password validation scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_DDT_002_PasswordValidation(123456, true, Minimum length (6 chars))">
+                  </a> <!-- TC_Auth_DDT_002_PasswordValidation(123456, true, Minimum length (6 chars)) -->
+                  <span class="method-name">TC_Auth_DDT_002_PasswordValidation</span>
+                  <span class="parameters">(123456,true,Minimum length (6 chars))</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.logging.log4j.Logger.info(String)&quot; because &quot;this.logger&quot; is null
+	at testCases.TC_Auth_003_LoginDDT.TC_Auth_DDT_002_PasswordValidation(TC_Auth_003_LoginDDT.java:183)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test various password validation scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_DDT_002_PasswordValidation(password, true, Valid length, no special chars)">
+                  </a> <!-- TC_Auth_DDT_002_PasswordValidation(password, true, Valid length, no special chars) -->
+                  <span class="method-name">TC_Auth_DDT_002_PasswordValidation</span>
+                  <span class="parameters">(password,true,Valid length, no special chars)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.logging.log4j.Logger.info(String)&quot; because &quot;this.logger&quot; is null
+	at testCases.TC_Auth_003_LoginDDT.TC_Auth_DDT_002_PasswordValidation(TC_Auth_003_LoginDDT.java:183)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test various password validation scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_DDT_002_PasswordValidation(   , false, Whitespace only)">
+                  </a> <!-- TC_Auth_DDT_002_PasswordValidation(   , false, Whitespace only) -->
+                  <span class="method-name">TC_Auth_DDT_002_PasswordValidation</span>
+                  <span class="parameters">(   ,false,Whitespace only)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.logging.log4j.Logger.info(String)&quot; because &quot;this.logger&quot; is null
+	at testCases.TC_Auth_003_LoginDDT.TC_Auth_DDT_002_PasswordValidation(TC_Auth_003_LoginDDT.java:183)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test various password validation scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_DDT_002_PasswordValidation(12345, false, Too short (less than 6 chars))">
+                  </a> <!-- TC_Auth_DDT_002_PasswordValidation(12345, false, Too short (less than 6 chars)) -->
+                  <span class="method-name">TC_Auth_DDT_002_PasswordValidation</span>
+                  <span class="parameters">(12345,false,Too short (less than 6 chars))</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.logging.log4j.Logger.info(String)&quot; because &quot;this.logger&quot; is null
+	at testCases.TC_Auth_003_LoginDDT.TC_Auth_DDT_002_PasswordValidation(TC_Auth_003_LoginDDT.java:183)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test various password validation scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_DDT_003_EmailValidation(user@domain.com, true, Valid email)">
+                  </a> <!-- TC_Auth_DDT_003_EmailValidation(user@domain.com, true, Valid email) -->
+                  <span class="method-name">TC_Auth_DDT_003_EmailValidation</span>
+                  <span class="parameters">(user@domain.com,true,Valid email)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.logging.log4j.Logger.info(String)&quot; because &quot;this.logger&quot; is null
+	at testCases.TC_Auth_003_LoginDDT.TC_Auth_DDT_003_EmailValidation(TC_Auth_003_LoginDDT.java:255)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test various email validation scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_DDT_003_EmailValidation(user@, false, Missing domain)">
+                  </a> <!-- TC_Auth_DDT_003_EmailValidation(user@, false, Missing domain) -->
+                  <span class="method-name">TC_Auth_DDT_003_EmailValidation</span>
+                  <span class="parameters">(user@,false,Missing domain)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.logging.log4j.Logger.info(String)&quot; because &quot;this.logger&quot; is null
+	at testCases.TC_Auth_003_LoginDDT.TC_Auth_DDT_003_EmailValidation(TC_Auth_003_LoginDDT.java:255)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test various email validation scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_DDT_003_EmailValidation(@domain.com, false, Missing local part)">
+                  </a> <!-- TC_Auth_DDT_003_EmailValidation(@domain.com, false, Missing local part) -->
+                  <span class="method-name">TC_Auth_DDT_003_EmailValidation</span>
+                  <span class="parameters">(@domain.com,false,Missing local part)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.logging.log4j.Logger.info(String)&quot; because &quot;this.logger&quot; is null
+	at testCases.TC_Auth_003_LoginDDT.TC_Auth_DDT_003_EmailValidation(TC_Auth_003_LoginDDT.java:255)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test various email validation scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_DDT_003_EmailValidation(, false, Empty email)">
+                  </a> <!-- TC_Auth_DDT_003_EmailValidation(, false, Empty email) -->
+                  <span class="method-name">TC_Auth_DDT_003_EmailValidation</span>
+                  <span class="parameters">(,false,Empty email)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.logging.log4j.Logger.info(String)&quot; because &quot;this.logger&quot; is null
+	at testCases.TC_Auth_003_LoginDDT.TC_Auth_DDT_003_EmailValidation(TC_Auth_003_LoginDDT.java:255)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test various email validation scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_DDT_003_EmailValidation(invalid-email, false, Missing @ and domain)">
+                  </a> <!-- TC_Auth_DDT_003_EmailValidation(invalid-email, false, Missing @ and domain) -->
+                  <span class="method-name">TC_Auth_DDT_003_EmailValidation</span>
+                  <span class="parameters">(invalid-email,false,Missing @ and domain)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.logging.log4j.Logger.info(String)&quot; because &quot;this.logger&quot; is null
+	at testCases.TC_Auth_003_LoginDDT.TC_Auth_DDT_003_EmailValidation(TC_Auth_003_LoginDDT.java:255)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test various email validation scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_DDT_003_EmailValidation(user@sub.domain.com, true, Email with subdomain)">
+                  </a> <!-- TC_Auth_DDT_003_EmailValidation(user@sub.domain.com, true, Email with subdomain) -->
+                  <span class="method-name">TC_Auth_DDT_003_EmailValidation</span>
+                  <span class="parameters">(user@sub.domain.com,true,Email with subdomain)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.logging.log4j.Logger.info(String)&quot; because &quot;this.logger&quot; is null
+	at testCases.TC_Auth_003_LoginDDT.TC_Auth_DDT_003_EmailValidation(TC_Auth_003_LoginDDT.java:255)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test various email validation scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_DDT_003_EmailValidation(user.name@domain.com, true, Email with dot in local part)">
+                  </a> <!-- TC_Auth_DDT_003_EmailValidation(user.name@domain.com, true, Email with dot in local part) -->
+                  <span class="method-name">TC_Auth_DDT_003_EmailValidation</span>
+                  <span class="parameters">(user.name@domain.com,true,Email with dot in local part)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.logging.log4j.Logger.info(String)&quot; because &quot;this.logger&quot; is null
+	at testCases.TC_Auth_003_LoginDDT.TC_Auth_DDT_003_EmailValidation(TC_Auth_003_LoginDDT.java:255)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test various email validation scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_DDT_003_EmailValidation(user@domain, false, Missing TLD)">
+                  </a> <!-- TC_Auth_DDT_003_EmailValidation(user@domain, false, Missing TLD) -->
+                  <span class="method-name">TC_Auth_DDT_003_EmailValidation</span>
+                  <span class="parameters">(user@domain,false,Missing TLD)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.logging.log4j.Logger.info(String)&quot; because &quot;this.logger&quot; is null
+	at testCases.TC_Auth_003_LoginDDT.TC_Auth_DDT_003_EmailValidation(TC_Auth_003_LoginDDT.java:255)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test various email validation scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MusicLMS_Test_Suite-class-failed -->
+          <div class="suite-MusicLMS_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.TC_Auth_002_SignupTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_008_VerifySignupPageDisplay">
+                  </a> <!-- TC_Auth_008_VerifySignupPageDisplay -->
+                  <span class="method-name">TC_Auth_008_VerifySignupPageDisplay</span>
+                  <div class="stack-trace">java.lang.AssertionError: Signup page should be displayed expected [true] but found [false]
+	at testCases.TC_Auth_002_SignupTest.TC_Auth_008_VerifySignupPageDisplay(TC_Auth_002_SignupTest.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify signup page is displayed correctly)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_009_VerifyValidTeacherSignup">
+                  </a> <!-- TC_Auth_009_VerifyValidTeacherSignup -->
+                  <span class="method-name">TC_Auth_009_VerifyValidTeacherSignup</span>
+                  <div class="stack-trace">java.lang.AssertionError: User should be redirected to login or see confirmation expected [true] but found [false]
+	at testCases.TC_Auth_002_SignupTest.TC_Auth_009_VerifyValidTeacherSignup(TC_Auth_002_SignupTest.java:136)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify teacher can signup with valid data)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_010_VerifyEmptyFieldsValidation">
+                  </a> <!-- TC_Auth_010_VerifyEmptyFieldsValidation -->
+                  <span class="method-name">TC_Auth_010_VerifyEmptyFieldsValidation</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //button[contains(text(),&apos;Create Account&apos;)]&apos; (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageObjects.BasePage.waitForClickable(BasePage.java:157)
+	at pageObjects.BasePage.safeClick(BasePage.java:175)
+	at pageObjects.SignupPage.clickCreateAccount(SignupPage.java:159)
+	at testCases.TC_Auth_002_SignupTest.TC_Auth_010_VerifyEmptyFieldsValidation(TC_Auth_002_SignupTest.java:166)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Create Account&apos;)]&quot;}
+  (Session info: chrome=143.0.7499.170)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.6.1&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7cd17359cae231f83933d97fc5eefdd1, findElement {value=//button[contains(text(),&apos;Create Account&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: /var/folders/qx/60lsnsw938l...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56355}, goog:processID: 2856, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56355/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7cd17359cae231f83933d97fc5eefdd1
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 34 more
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify signup fails with empty fields)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_011_VerifyShortPasswordValidation">
+                  </a> <!-- TC_Auth_011_VerifyShortPasswordValidation -->
+                  <span class="method-name">TC_Auth_011_VerifyShortPasswordValidation</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.id: fullName&apos; (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageObjects.BasePage.waitForVisibility(BasePage.java:139)
+	at pageObjects.BasePage.safeType(BasePage.java:190)
+	at pageObjects.SignupPage.enterFullName(SignupPage.java:129)
+	at testCases.TC_Auth_002_SignupTest.TC_Auth_011_VerifyShortPasswordValidation(TC_Auth_002_SignupTest.java:211)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#fullName&quot;}
+  (Session info: chrome=143.0.7499.170)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.6.1&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7cd17359cae231f83933d97fc5eefdd1, findElement {value=fullName, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: /var/folders/qx/60lsnsw938l...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56355}, goog:processID: 2856, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56355/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7cd17359cae231f83933d97fc5eefdd1
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 34 more
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify signup fails with short password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_012_VerifyInvalidEmailValidation">
+                  </a> <!-- TC_Auth_012_VerifyInvalidEmailValidation -->
+                  <span class="method-name">TC_Auth_012_VerifyInvalidEmailValidation</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.id: fullName&apos; (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageObjects.BasePage.waitForVisibility(BasePage.java:139)
+	at pageObjects.BasePage.safeType(BasePage.java:190)
+	at pageObjects.SignupPage.enterFullName(SignupPage.java:129)
+	at pageObjects.SignupPage.signup(SignupPage.java:195)
+	at testCases.TC_Auth_002_SignupTest.TC_Auth_012_VerifyInvalidEmailValidation(TC_Auth_002_SignupTest.java:260)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#fullName&quot;}
+  (Session info: chrome=143.0.7499.170)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.6.1&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7cd17359cae231f83933d97fc5eefdd1, findElement {value=fullName, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: /var/folders/qx/60lsnsw938l...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56355}, goog:processID: 2856, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56355/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7cd17359cae231f83933d97fc5eefdd1
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 35 more
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify signup fails with invalid email format)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_013_VerifyLoginNavigation">
+                  </a> <!-- TC_Auth_013_VerifyLoginNavigation -->
+                  <span class="method-name">TC_Auth_013_VerifyLoginNavigation</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //a[contains(text(),&apos;Log in&apos;)]&apos; (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageObjects.BasePage.waitForClickable(BasePage.java:157)
+	at pageObjects.BasePage.safeClick(BasePage.java:175)
+	at pageObjects.SignupPage.clickLoginLink(SignupPage.java:173)
+	at testCases.TC_Auth_002_SignupTest.TC_Auth_013_VerifyLoginNavigation(TC_Auth_002_SignupTest.java:294)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;Log in&apos;)]&quot;}
+  (Session info: chrome=143.0.7499.170)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.6.1&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7cd17359cae231f83933d97fc5eefdd1, findElement {value=//a[contains(text(),&apos;Log in&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: /var/folders/qx/60lsnsw938l...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56355}, goog:processID: 2856, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56355/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7cd17359cae231f83933d97fc5eefdd1
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 34 more
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify navigation from signup to login page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_014_VerifyCreateAccountButtonState">
+                  </a> <!-- TC_Auth_014_VerifyCreateAccountButtonState -->
+                  <span class="method-name">TC_Auth_014_VerifyCreateAccountButtonState</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Create Account&apos;)]&quot;}
+  (Session info: chrome=143.0.7499.170)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.6.1&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7cd17359cae231f83933d97fc5eefdd1, findElement {value=//button[contains(text(),&apos;Create Account&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: /var/folders/qx/60lsnsw938l...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56355}, goog:processID: 2856, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56355/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7cd17359cae231f83933d97fc5eefdd1
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.isEnabled(Unknown Source)
+	at pageObjects.SignupPage.isCreateAccountButtonEnabled(SignupPage.java:239)
+	at testCases.TC_Auth_002_SignupTest.TC_Auth_014_VerifyCreateAccountButtonState(TC_Auth_002_SignupTest.java:330)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify Create Account button is enabled)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_015_VerifyDuplicateEmailSignup">
+                  </a> <!-- TC_Auth_015_VerifyDuplicateEmailSignup -->
+                  <span class="method-name">TC_Auth_015_VerifyDuplicateEmailSignup</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.id: fullName&apos; (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageObjects.BasePage.waitForVisibility(BasePage.java:139)
+	at pageObjects.BasePage.safeType(BasePage.java:190)
+	at pageObjects.SignupPage.enterFullName(SignupPage.java:129)
+	at pageObjects.SignupPage.signup(SignupPage.java:195)
+	at testCases.TC_Auth_002_SignupTest.TC_Auth_015_VerifyDuplicateEmailSignup(TC_Auth_002_SignupTest.java:367)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#fullName&quot;}
+  (Session info: chrome=143.0.7499.170)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.6.1&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7cd17359cae231f83933d97fc5eefdd1, findElement {value=fullName, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: /var/folders/qx/60lsnsw938l...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56355}, goog:processID: 2856, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56355/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7cd17359cae231f83933d97fc5eefdd1
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 35 more
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify signup fails with already registered email)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MusicLMS_Test_Suite-class-failed -->
+          <div class="suite-MusicLMS_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.TC_Auth_001_LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_001_VerifyLoginPageDisplay">
+                  </a> <!-- TC_Auth_001_VerifyLoginPageDisplay -->
+                  <span class="method-name">TC_Auth_001_VerifyLoginPageDisplay</span>
+                  <div class="stack-trace">java.lang.AssertionError: Login page should be displayed expected [true] but found [false]
+	at testCases.TC_Auth_001_LoginTest.TC_Auth_001_VerifyLoginPageDisplay(TC_Auth_001_LoginTest.java:104)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify login page is displayed correctly)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_002_VerifyValidLogin">
+                  </a> <!-- TC_Auth_002_VerifyValidLogin -->
+                  <span class="method-name">TC_Auth_002_VerifyValidLogin</span>
+                  <div class="stack-trace">java.lang.AssertionError: Dashboard should be displayed after login expected [true] but found [false]
+	at testCases.TC_Auth_001_LoginTest.TC_Auth_002_VerifyValidLogin(TC_Auth_001_LoginTest.java:166)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify login with valid credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_006_VerifySignupNavigation">
+                  </a> <!-- TC_Auth_006_VerifySignupNavigation -->
+                  <span class="method-name">TC_Auth_006_VerifySignupNavigation</span>
+                  <div class="stack-trace">java.lang.AssertionError: Should navigate to signup page expected [true] but found [false]
+	at testCases.TC_Auth_001_LoginTest.TC_Auth_006_VerifySignupNavigation(TC_Auth_001_LoginTest.java:351)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify navigation from login to signup page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MusicLMS_Test_Suite-class-failed -->
+          <div class="suite-MusicLMS_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.TC_Auth_001_LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_003_VerifyInvalidPasswordLogin">
+                  </a> <!-- TC_Auth_003_VerifyInvalidPasswordLogin -->
+                  <span class="method-name">TC_Auth_003_VerifyInvalidPasswordLogin</span>
+                  <em>
+(Verify login fails with invalid password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_004_VerifyInvalidEmailLogin">
+                  </a> <!-- TC_Auth_004_VerifyInvalidEmailLogin -->
+                  <span class="method-name">TC_Auth_004_VerifyInvalidEmailLogin</span>
+                  <em>
+(Verify login fails with non-existent email)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_005_VerifyEmptyFieldsValidation">
+                  </a> <!-- TC_Auth_005_VerifyEmptyFieldsValidation -->
+                  <span class="method-name">TC_Auth_005_VerifyEmptyFieldsValidation</span>
+                  <em>
+(Verify login fails with empty fields)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Auth_007_VerifyLoginButtonState">
+                  </a> <!-- TC_Auth_007_VerifyLoginButtonState -->
+                  <span class="method-name">TC_Auth_007_VerifyLoginButtonState</span>
+                  <em>
+(Verify login button is enabled)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MusicLMS_Test_Suite-class-passed -->
+        </div> <!-- panel MusicLMS_Test_Suite -->
+        <div panel-name="test-xml-MusicLMS_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/Users/frank/claude-projects/LMS/music-lms/music-lms-tests/src/test/resources/testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;MusicLMS Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;utilities.ExtentReportManager&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Authentication Tests - Chrome&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;sanity&quot;/&gt;
+        &lt;include name=&quot;master&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.TC_Auth_001_LoginTest&quot;/&gt;
+      &lt;class name=&quot;testCases.TC_Auth_002_SignupTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Authentication Tests - Chrome --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Data-Driven Authentication Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;dataDriven&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.TC_Auth_003_LoginDDT&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Data-Driven Authentication Tests --&gt;
+&lt;/suite&gt; &lt;!-- MusicLMS Test Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-MusicLMS_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for MusicLMS Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Authentication Tests - Chrome (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Data-Driven Authentication Tests (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-MusicLMS_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for MusicLMS Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">dataDriven</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_DDT_001_LoginWithMultipleCredentials</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_DDT_002_PasswordValidation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_DDT_003_EmailValidation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">master</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_001_VerifyLoginPageDisplay</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_002_VerifyValidLogin</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_003_VerifyInvalidPasswordLogin</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_004_VerifyInvalidEmailLogin</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_005_VerifyEmptyFieldsValidation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_006_VerifySignupNavigation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_007_VerifyLoginButtonState</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_008_VerifySignupPageDisplay</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_009_VerifyValidTeacherSignup</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_010_VerifyEmptyFieldsValidation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_011_VerifyShortPasswordValidation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_012_VerifyInvalidEmailValidation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_013_VerifyLoginNavigation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_014_VerifyCreateAccountButtonState</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_015_VerifyDuplicateEmailSignup</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_DDT_001_LoginWithMultipleCredentials</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">regression</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_002_VerifyValidLogin</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_003_VerifyInvalidPasswordLogin</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_004_VerifyInvalidEmailLogin</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_005_VerifyEmptyFieldsValidation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_009_VerifyValidTeacherSignup</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_010_VerifyEmptyFieldsValidation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_011_VerifyShortPasswordValidation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_012_VerifyInvalidEmailValidation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_015_VerifyDuplicateEmailSignup</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_DDT_002_PasswordValidation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_DDT_003_EmailValidation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">sanity</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_001_VerifyLoginPageDisplay</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_002_VerifyValidLogin</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_006_VerifySignupNavigation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_007_VerifyLoginButtonState</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_008_VerifySignupPageDisplay</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_013_VerifyLoginNavigation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_Auth_014_VerifyCreateAccountButtonState</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-MusicLMS_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for MusicLMS Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_MusicLMS_Test_Suite');
+function tableData_MusicLMS_Test_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(30);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'TC_Auth_010_VerifyEmptyFieldsValidation')
+data.setCell(0, 2, 'testCases.TC_Auth_002_SignupTest')
+data.setCell(0, 3, 33318);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TC_Auth_003_VerifyInvalidPasswordLogin')
+data.setCell(1, 2, 'testCases.TC_Auth_001_LoginTest')
+data.setCell(1, 3, 33070);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TC_Auth_011_VerifyShortPasswordValidation')
+data.setCell(2, 2, 'testCases.TC_Auth_002_SignupTest')
+data.setCell(2, 3, 32618);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'TC_Auth_012_VerifyInvalidEmailValidation')
+data.setCell(3, 2, 'testCases.TC_Auth_002_SignupTest')
+data.setCell(3, 3, 32597);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'TC_Auth_013_VerifyLoginNavigation')
+data.setCell(4, 2, 'testCases.TC_Auth_002_SignupTest')
+data.setCell(4, 3, 32551);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'TC_Auth_015_VerifyDuplicateEmailSignup')
+data.setCell(5, 2, 'testCases.TC_Auth_002_SignupTest')
+data.setCell(5, 3, 32257);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'TC_Auth_002_VerifyValidLogin')
+data.setCell(6, 2, 'testCases.TC_Auth_001_LoginTest')
+data.setCell(6, 3, 15831);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'TC_Auth_009_VerifyValidTeacherSignup')
+data.setCell(7, 2, 'testCases.TC_Auth_002_SignupTest')
+data.setCell(7, 3, 13784);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'TC_Auth_014_VerifyCreateAccountButtonState')
+data.setCell(8, 2, 'testCases.TC_Auth_002_SignupTest')
+data.setCell(8, 3, 11813);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'TC_Auth_008_VerifySignupPageDisplay')
+data.setCell(9, 2, 'testCases.TC_Auth_002_SignupTest')
+data.setCell(9, 3, 10249);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'TC_Auth_001_VerifyLoginPageDisplay')
+data.setCell(10, 2, 'testCases.TC_Auth_001_LoginTest')
+data.setCell(10, 3, 10211);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'TC_Auth_004_VerifyInvalidEmailLogin')
+data.setCell(11, 2, 'testCases.TC_Auth_001_LoginTest')
+data.setCell(11, 3, 2512);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'TC_Auth_006_VerifySignupNavigation')
+data.setCell(12, 2, 'testCases.TC_Auth_001_LoginTest')
+data.setCell(12, 3, 291);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'TC_Auth_005_VerifyEmptyFieldsValidation')
+data.setCell(13, 2, 'testCases.TC_Auth_001_LoginTest')
+data.setCell(13, 3, 225);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'TC_Auth_007_VerifyLoginButtonState')
+data.setCell(14, 2, 'testCases.TC_Auth_001_LoginTest')
+data.setCell(14, 3, 144);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'TC_Auth_DDT_002_PasswordValidation')
+data.setCell(15, 2, 'testCases.TC_Auth_003_LoginDDT')
+data.setCell(15, 3, 13);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'TC_Auth_DDT_003_EmailValidation')
+data.setCell(16, 2, 'testCases.TC_Auth_003_LoginDDT')
+data.setCell(16, 3, 1);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'TC_Auth_DDT_002_PasswordValidation')
+data.setCell(17, 2, 'testCases.TC_Auth_003_LoginDDT')
+data.setCell(17, 3, 1);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'TC_Auth_DDT_002_PasswordValidation')
+data.setCell(18, 2, 'testCases.TC_Auth_003_LoginDDT')
+data.setCell(18, 3, 1);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'TC_Auth_DDT_003_EmailValidation')
+data.setCell(19, 2, 'testCases.TC_Auth_003_LoginDDT')
+data.setCell(19, 3, 1);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'TC_Auth_DDT_003_EmailValidation')
+data.setCell(20, 2, 'testCases.TC_Auth_003_LoginDDT')
+data.setCell(20, 3, 1);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'TC_Auth_DDT_002_PasswordValidation')
+data.setCell(21, 2, 'testCases.TC_Auth_003_LoginDDT')
+data.setCell(21, 3, 0);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'TC_Auth_DDT_002_PasswordValidation')
+data.setCell(22, 2, 'testCases.TC_Auth_003_LoginDDT')
+data.setCell(22, 3, 0);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'TC_Auth_DDT_003_EmailValidation')
+data.setCell(23, 2, 'testCases.TC_Auth_003_LoginDDT')
+data.setCell(23, 3, 0);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'TC_Auth_DDT_002_PasswordValidation')
+data.setCell(24, 2, 'testCases.TC_Auth_003_LoginDDT')
+data.setCell(24, 3, 0);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'TC_Auth_DDT_003_EmailValidation')
+data.setCell(25, 2, 'testCases.TC_Auth_003_LoginDDT')
+data.setCell(25, 3, 0);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'TC_Auth_DDT_003_EmailValidation')
+data.setCell(26, 2, 'testCases.TC_Auth_003_LoginDDT')
+data.setCell(26, 3, 0);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'TC_Auth_DDT_003_EmailValidation')
+data.setCell(27, 2, 'testCases.TC_Auth_003_LoginDDT')
+data.setCell(27, 3, 0);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'TC_Auth_DDT_003_EmailValidation')
+data.setCell(28, 2, 'testCases.TC_Auth_003_LoginDDT')
+data.setCell(28, 3, 0);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'TC_Auth_DDT_001_LoginWithMultipleCredentials')
+data.setCell(29, 2, 'testCases.TC_Auth_003_LoginDDT')
+data.setCell(29, 3, 0);
+window.suiteTableData['MusicLMS_Test_Suite']= { tableData: data, tableDiv: 'times-div-MusicLMS_Test_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <div id="times-div-MusicLMS_Test_Suite">
+              </div> <!-- times-div-MusicLMS_Test_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-MusicLMS_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for MusicLMS Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-MusicLMS_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-MusicLMS_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.TC_Auth_001_LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_001_VerifyLoginPageDisplay</span>
+                <span class="method-start">3274 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_002_VerifyValidLogin</span>
+                <span class="method-start">13617 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_Auth_003_VerifyInvalidPasswordLogin</span>
+                <span class="method-start">29566 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_Auth_004_VerifyInvalidEmailLogin</span>
+                <span class="method-start">62637 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_Auth_005_VerifyEmptyFieldsValidation</span>
+                <span class="method-start">65150 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_006_VerifySignupNavigation</span>
+                <span class="method-start">65376 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_Auth_007_VerifyLoginButtonState</span>
+                <span class="method-start">66136 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">66281 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.TC_Auth_002_SignupTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">66396 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_008_VerifySignupPageDisplay</span>
+                <span class="method-start">67897 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_009_VerifyValidTeacherSignup</span>
+                <span class="method-start">78261 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_010_VerifyEmptyFieldsValidation</span>
+                <span class="method-start">92182 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_011_VerifyShortPasswordValidation</span>
+                <span class="method-start">125704 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_012_VerifyInvalidEmailValidation</span>
+                <span class="method-start">158490 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_013_VerifyLoginNavigation</span>
+                <span class="method-start">191292 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_014_VerifyCreateAccountButtonState</span>
+                <span class="method-start">223984 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_015_VerifyDuplicateEmailSignup</span>
+                <span class="method-start">235939 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">268369 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.TC_Auth_003_LoginDDT</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_DDT_002_PasswordValidation(12345, false, Too short (less than 6 chars))</span>
+                <span class="method-start">270190 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_DDT_002_PasswordValidation(123456, true, Minimum length (6 chars))</span>
+                <span class="method-start">270210 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_DDT_002_PasswordValidation(password, true, Valid length, no special chars)</span>
+                <span class="method-start">270211 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_DDT_002_PasswordValidation(P@ssw0rd!, true, Strong password)</span>
+                <span class="method-start">270213 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_DDT_002_PasswordValidation(, false, Empty password)</span>
+                <span class="method-start">270217 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_DDT_002_PasswordValidation(   , false, Whitespace only)</span>
+                <span class="method-start">270219 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_DDT_003_EmailValidation(user@domain.com, true, Valid email)</span>
+                <span class="method-start">270221 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_DDT_003_EmailValidation(user.name@domain.com, true, Email with dot in local part)</span>
+                <span class="method-start">270222 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_DDT_003_EmailValidation(user@sub.domain.com, true, Email with subdomain)</span>
+                <span class="method-start">270223 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_DDT_003_EmailValidation(invalid-email, false, Missing @ and domain)</span>
+                <span class="method-start">270224 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_DDT_003_EmailValidation(user@, false, Missing domain)</span>
+                <span class="method-start">270225 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_DDT_003_EmailValidation(@domain.com, false, Missing local part)</span>
+                <span class="method-start">270225 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_DDT_003_EmailValidation(, false, Empty email)</span>
+                <span class="method-start">270226 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_Auth_DDT_003_EmailValidation(user@domain, false, Missing TLD)</span>
+                <span class="method-start">270227 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

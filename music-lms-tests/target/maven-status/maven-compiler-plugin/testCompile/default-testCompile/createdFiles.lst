@@ -1,0 +1,12 @@
+pageObjects/LoginPage.class
+testCases/TC_Auth_003_LoginDDT.class
+utilities/ExtentReportManager.class
+testBase/BaseClass.class
+utilities/DataProviders.class
+utilities/ExcelUtility.class
+pageObjects/InvitePage.class
+testCases/TC_Auth_002_SignupTest.class
+testCases/TC_Auth_001_LoginTest.class
+pageObjects/DashboardPage.class
+pageObjects/BasePage.class
+pageObjects/SignupPage.class

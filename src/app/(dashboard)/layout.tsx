@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import DashboardLayout from "@/components/layouts/DashboardLayout";
+import { getNotifications } from "./dashboard/notifications-actions";
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
   const supabase = await createClient();
@@ -13,12 +14,11 @@ export default async function Layout({ children }: { children: React.ReactNode }
     redirect("/login");
   }
 
-  // Get the user's profile from our users table
-  const { data: user } = await supabase
-    .from("users")
-    .select("*")
-    .eq("id", authUser.id)
-    .single();
+  // Get the user's profile and notifications
+  const [{ data: user }, notifications] = await Promise.all([
+    supabase.from("users").select("*").eq("id", authUser.id).single(),
+    getNotifications(),
+  ]);
 
   // If no user profile exists yet (new OAuth user), create one
   if (!user) {
@@ -44,8 +44,8 @@ export default async function Layout({ children }: { children: React.ReactNode }
       user_id: authUser.id,
     });
 
-    return <DashboardLayout user={newUser}>{children}</DashboardLayout>;
+    return <DashboardLayout user={newUser} initialNotifications={[]}>{children}</DashboardLayout>;
   }
 
-  return <DashboardLayout user={user}>{children}</DashboardLayout>;
+  return <DashboardLayout user={user} initialNotifications={notifications}>{children}</DashboardLayout>;
 }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- MusicLMS TestNG Configuration -->
+<suite name="MusicLMS Test Suite" parallel="none" verbose="2">
+
+    <!-- Listeners for reporting -->
+    <listeners>
+        <listener class-name="utilities.ExtentReportManager"/>
+    </listeners>
+
+    <!-- Authentication Tests on Chrome -->
+    <test name="Authentication Tests - Chrome">
+        <parameter name="browser" value="chrome"/>
+
+        <groups>
+            <run>
+                <include name="sanity"/>
+                <include name="master"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="testCases.TC_Auth_001_LoginTest"/>
+            <class name="testCases.TC_Auth_002_SignupTest"/>
+        </classes>
+    </test>
+
+    <!-- Data Driven Tests -->
+    <test name="Data-Driven Authentication Tests">
+        <parameter name="browser" value="chrome"/>
+
+        <groups>
+            <run>
+                <include name="dataDriven"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="testCases.TC_Auth_003_LoginDDT"/>
+        </classes>
+    </test>
+
+</suite>

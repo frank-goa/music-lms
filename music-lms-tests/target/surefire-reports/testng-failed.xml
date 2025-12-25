@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MusicLMS Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="utilities.ExtentReportManager"/>
+  </listeners>
+  <test thread-count="5" name="Authentication Tests - Chrome(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="sanity"/>
+        <include name="master"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testCases.TC_Auth_002_SignupTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="TC_Auth_010_VerifyEmptyFieldsValidation"/>
+          <include name="TC_Auth_014_VerifyCreateAccountButtonState"/>
+          <include name="TC_Auth_008_VerifySignupPageDisplay"/>
+          <include name="TC_Auth_015_VerifyDuplicateEmailSignup"/>
+          <include name="setup"/>
+          <include name="TC_Auth_013_VerifyLoginNavigation"/>
+          <include name="TC_Auth_009_VerifyValidTeacherSignup"/>
+          <include name="TC_Auth_012_VerifyInvalidEmailValidation"/>
+          <include name="TC_Auth_011_VerifyShortPasswordValidation"/>
+        </methods>
+      </class> <!-- testCases.TC_Auth_002_SignupTest -->
+      <class name="testCases.TC_Auth_001_LoginTest">
+        <methods>
+          <include name="TC_Auth_002_VerifyValidLogin"/>
+          <include name="TC_Auth_001_VerifyLoginPageDisplay"/>
+          <include name="TC_Auth_006_VerifySignupNavigation"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.TC_Auth_001_LoginTest -->
+    </classes>
+  </test> <!-- Authentication Tests - Chrome(failed) -->
+  <test thread-count="5" name="Data-Driven Authentication Tests(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="dataDriven"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testCases.TC_Auth_003_LoginDDT">
+        <methods>
+          <include name="TC_Auth_DDT_003_EmailValidation" invocation-numbers="0 1 2 3 4 5 6 7"/>
+          <include name="TC_Auth_DDT_002_PasswordValidation" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="TC_Auth_DDT_001_LoginWithMultipleCredentials"/>
+        </methods>
+      </class> <!-- testCases.TC_Auth_003_LoginDDT -->
+    </classes>
+  </test> <!-- Data-Driven Authentication Tests(failed) -->
+</suite> <!-- Failed suite [MusicLMS Test Suite] -->

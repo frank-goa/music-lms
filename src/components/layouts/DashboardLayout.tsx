@@ -32,10 +32,12 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { User, UserRole } from "@/types/database";
+import { NotificationBell } from "@/app/(dashboard)/dashboard/NotificationBell";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
   user: User;
+  initialNotifications: any[];
 }
 
 const teacherNavItems = [
@@ -114,7 +116,7 @@ function Sidebar({ role, pathname }: { role: UserRole; pathname: string }) {
   );
 }
 
-export default function DashboardLayout({ children, user }: DashboardLayoutProps) {
+export default function DashboardLayout({ children, user, initialNotifications }: DashboardLayoutProps) {
   const pathname = usePathname();
   const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -163,7 +165,8 @@ export default function DashboardLayout({ children, user }: DashboardLayoutProps
       {/* Main content */}
       <div className="md:pl-64">
         {/* Top bar */}
-        <header className="sticky top-0 z-30 hidden h-14 items-center justify-end border-b bg-background px-6 md:flex">
+        <header className="sticky top-0 z-30 hidden h-14 items-center justify-end border-b bg-background px-6 md:flex gap-4">
+          <NotificationBell userId={user.id} initialNotifications={initialNotifications} />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="relative h-9 w-9 rounded-full">

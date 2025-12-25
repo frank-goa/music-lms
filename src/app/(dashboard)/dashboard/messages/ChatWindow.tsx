@@ -1,14 +1,23 @@
-'use client';
-
 import { useEffect, useRef, useState } from 'react';
-import { Send } from 'lucide-react';
+import { Send, Trash2 } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { cn } from '@/lib/utils';
-import { getMessages, sendMessage } from './actions';
+import { getMessages, sendMessage, clearMessages } from './actions';
 import { toast } from 'sonner';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 interface Message {
   id: string;
@@ -34,6 +43,7 @@ export function ChatWindow({ currentUser, contact, initialMessages }: ChatWindow
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [newMessage, setNewMessage] = useState('');
   const [isSending, setIsSending] = useState(false);
+  const [isClearing, setIsClearing] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const supabase = createClient();
 
@@ -54,7 +64,7 @@ export function ChatWindow({ currentUser, contact, initialMessages }: ChatWindow
           event: 'INSERT',
           schema: 'public',
           table: 'messages',
-          filter: `receiver_id=eq.${currentUser}`, 
+          filter: `receiver_id=eq.${currentUser}`,
         },
         (payload) => {
           const newMsg = payload.new as Message;
@@ -99,22 +109,61 @@ export function ChatWindow({ currentUser, contact, initialMessages }: ChatWindow
     setIsSending(false);
   };
 
+  const handleClearChat = async () => {
+    setIsClearing(true);
+    const result = await clearMessages(contact.id);
+    if (result.success) {
+      setMessages([]);
+      toast.success('Conversation cleared');
+    } else {
+      toast.error(result.error || 'Failed to clear chat');
+    }
+    setIsClearing(false);
+  };
+
   return (
     <div className="flex flex-col h-[600px] border rounded-lg bg-background">
       {/* Header */}
-      <div className="flex items-center gap-3 p-4 border-b">
-        <Avatar>
-          <AvatarImage src={contact.avatar_url || undefined} />
-          <AvatarFallback>{contact.full_name?.[0] || contact.email[0]}</AvatarFallback>
-        </Avatar>
-        <div>
-          <div className="font-semibold">{contact.full_name || contact.email}</div>
-          <div className="text-xs text-muted-foreground">Online</div>
+      <div className="flex items-center justify-between p-4 border-b">
+        <div className="flex items-center gap-3">
+          <Avatar>
+            <AvatarImage src={contact.avatar_url || undefined} />
+            <AvatarFallback>{contact.full_name?.[0] || contact.email[0]}</AvatarFallback>
+          </Avatar>
+          <div>
+            <div className="font-semibold">{contact.full_name || contact.email}</div>
+            <div className="text-xs text-muted-foreground">Online</div>
+          </div>
         </div>
+
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-destructive">
+              <Trash2 className="h-4 w-4" />
+            </Button>
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+            <AlertDialogTitle>Clear conversation?</AlertDialogTitle>
+              <AlertDialogDescription>
+                This will permanently delete all messages in this conversation. This action cannot be undone.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancel</AlertDialogCancel>
+              <AlertDialogAction 
+                onClick={handleClearChat}
+                className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                disabled={isClearing}
+              >
+                {isClearing ? 'Clearing...' : 'Clear Conversation'}
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
       </div>
 
-      {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4" ref={scrollRef}>
+      {/* Messages */}      <div className="flex-1 overflow-y-auto p-4 space-y-4" ref={scrollRef}>
         {messages.map((msg) => {
           const isMe = msg.sender_id === currentUser;
           return (

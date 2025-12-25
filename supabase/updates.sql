@@ -120,9 +120,39 @@ CREATE POLICY "Users can send messages" ON public.messages
 CREATE POLICY "Users can update their received messages" ON public.messages
   FOR UPDATE USING (auth.uid() = receiver_id);
 
+-- Enable Realtime for messages
+ALTER PUBLICATION supabase_realtime ADD TABLE public.messages;
+
 -- Create indexes
 CREATE INDEX IF NOT EXISTS idx_lessons_teacher ON public.lessons(teacher_id);
 CREATE INDEX IF NOT EXISTS idx_lessons_student ON public.lessons(student_id);
 CREATE INDEX IF NOT EXISTS idx_resources_teacher ON public.resources(teacher_id);
 CREATE INDEX IF NOT EXISTS idx_messages_sender ON public.messages(sender_id);
 CREATE INDEX IF NOT EXISTS idx_messages_receiver ON public.messages(receiver_id);
+
+-- 5. Notifications
+CREATE TABLE IF NOT EXISTS public.notifications (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  user_id UUID NOT NULL REFERENCES public.users(id) ON DELETE CASCADE,
+  type TEXT NOT NULL,
+  title TEXT NOT NULL,
+  content TEXT,
+  link TEXT,
+  read_at TIMESTAMPTZ,
+  created_at TIMESTAMPTZ DEFAULT NOW() NOT NULL
+);
+
+ALTER TABLE public.notifications ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Users can read their notifications" ON public.notifications
+  FOR SELECT USING (user_id = auth.uid());
+
+CREATE POLICY "Users can update their notifications" ON public.notifications
+  FOR UPDATE USING (user_id = auth.uid());
+
+-- Allow system/admins to insert notifications (service role bypasses RLS)
+CREATE POLICY "Service role can insert notifications" ON public.notifications
+  FOR INSERT WITH CHECK (true);
+
+CREATE INDEX IF NOT EXISTS idx_notifications_user ON public.notifications(user_id);
+CREATE INDEX IF NOT EXISTS idx_notifications_unread ON public.notifications(user_id, read_at) WHERE read_at IS NULL;

@@ -5,6 +5,7 @@ import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
 import { startOfWeek, endOfWeek, addWeeks, subWeeks } from 'date-fns';
+import { createNotification } from '../notifications-actions';
 
 const createLessonSchema = z.object({
   studentId: z.string().min(1, 'Student is required'),
@@ -102,6 +103,30 @@ export async function createLesson(data: CreateLessonInput) {
     console.error('Error creating lesson:', error);
     return { error: `Failed to schedule lesson: ${error.message}` };
   }
+
+  // Trigger Notification
+  const { data: teacher } = await supabase
+    .from('users')
+    .select('full_name')
+    .eq('id', user.id)
+    .single();
+
+  const lessonDate = startDateTime.toLocaleDateString([], {
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric'
+  });
+  const lessonTime = startDateTime.toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+
+  await createNotification(studentId, {
+    type: 'lesson',
+    title: 'New Lesson Scheduled',
+    content: `${teacher?.full_name || 'Your teacher'} scheduled a lesson for ${lessonDate} at ${lessonTime}.`,
+    link: '/dashboard/schedule',
+  });
 
   revalidatePath('/dashboard/schedule');
   return { success: true };

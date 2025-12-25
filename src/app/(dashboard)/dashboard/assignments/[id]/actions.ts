@@ -4,6 +4,7 @@ import { createClient } from '@/lib/supabase/server';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
+import { createNotification } from '../../notifications-actions';
 
 const submissionSchema = z.object({
   assignmentId: z.string().uuid(),
@@ -62,6 +63,28 @@ export async function submitAssignment(data: SubmitAssignmentInput) {
   if (updateError) {
     console.error('Error updating status:', updateError);
     // Non-critical error, submission exists but status might be stale
+  }
+
+  // Trigger Notification
+  const { data: assignment } = await supabase
+    .from('assignments')
+    .select('title, teacher_id')
+    .eq('id', assignmentId)
+    .single();
+
+  if (assignment) {
+    const { data: student } = await supabase
+      .from('users')
+      .select('full_name')
+      .eq('id', user.id)
+      .single();
+
+    await createNotification(assignment.teacher_id, {
+      type: 'submission',
+      title: 'New Submission',
+      content: `${student?.full_name || 'A student'} submitted work for "${assignment.title}".`,
+      link: `/dashboard/submissions`,
+    });
   }
 
   revalidatePath(`/dashboard/assignments/${assignmentId}`);

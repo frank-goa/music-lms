@@ -4,6 +4,7 @@ import { createClient } from '@/lib/supabase/server';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
+import { createNotification } from '../notifications-actions';
 
 const createAssignmentSchema = z.object({
   title: z.string().min(1, 'Title is required'),
@@ -85,6 +86,24 @@ export async function createAssignment(data: CreateAssignmentInput) {
       // Non-fatal error
     }
   }
+
+  // 4. Trigger Notifications
+  const { data: teacher } = await supabase
+    .from('users')
+    .select('full_name')
+    .eq('id', user.id)
+    .single();
+
+  await Promise.all(
+    studentIds.map((studentId) =>
+      createNotification(studentId, {
+        type: 'assignment',
+        title: 'New Assignment',
+        content: `${teacher?.full_name || 'Your teacher'} created a new assignment: "${title}"`,
+        link: `/dashboard/assignments`,
+      })
+    )
+  );
 
   revalidatePath('/dashboard/assignments');
   return { success: true, assignmentId: assignment.id };

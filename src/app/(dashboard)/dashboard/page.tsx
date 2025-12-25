@@ -7,6 +7,7 @@ import Link from "next/link";
 import { getStudentGamificationStats } from "./gamification-actions";
 import { StreakCard } from "@/components/gamification/StreakCard";
 import { GoalProgress } from "@/components/gamification/GoalProgress";
+import { DashboardSetupLoader } from "./DashboardSetupLoader";
 
 async function getTeacherStats(supabase: Awaited<ReturnType<typeof createClient>>, userId: string) {
   const [studentsResult, assignmentsResult, submissionsResult] = await Promise.all([
@@ -14,15 +15,19 @@ async function getTeacherStats(supabase: Awaited<ReturnType<typeof createClient>
     supabase.from("assignments").select("id", { count: "exact" }).eq("teacher_id", userId),
     supabase
       .from("submissions")
-      .select("id, assignments!inner(teacher_id)")
-      .eq("assignments.teacher_id", userId)
-      .is("feedback.submission_id", null),
+      .select("id, feedback(id), assignments!inner(teacher_id)")
+      .eq("assignments.teacher_id", userId),
   ]);
+
+  const pendingReviews =
+    submissionsResult.data?.filter(
+      (s) => !s.feedback || (Array.isArray(s.feedback) && s.feedback.length === 0)
+    ).length || 0;
 
   return {
     studentCount: studentsResult.count || 0,
     assignmentCount: assignmentsResult.count || 0,
-    pendingReviews: submissionsResult.data?.length || 0,
+    pendingReviews: pendingReviews,
   };
 }
 
@@ -62,7 +67,9 @@ export default async function DashboardPage() {
   const { data: user } = await supabase.from("users").select("*").eq("id", authUser.id).single();
 
   if (!user) {
-    redirect("/login");
+    // User profile might not be created yet (race condition on new registration)
+    // The layout will handle user creation - use client component to auto-refresh
+    return <DashboardSetupLoader />;
   }
 
   const isTeacher = user.role === "teacher";

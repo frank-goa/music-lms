@@ -1,0 +1,12 @@
+/Users/frank/claude-projects/LMS/music-lms/music-lms-tests/src/test/java/pageObjects/BasePage.java
+/Users/frank/claude-projects/LMS/music-lms/music-lms-tests/src/test/java/pageObjects/DashboardPage.java
+/Users/frank/claude-projects/LMS/music-lms/music-lms-tests/src/test/java/pageObjects/InvitePage.java
+/Users/frank/claude-projects/LMS/music-lms/music-lms-tests/src/test/java/pageObjects/LoginPage.java
+/Users/frank/claude-projects/LMS/music-lms/music-lms-tests/src/test/java/pageObjects/SignupPage.java
+/Users/frank/claude-projects/LMS/music-lms/music-lms-tests/src/test/java/testBase/BaseClass.java
+/Users/frank/claude-projects/LMS/music-lms/music-lms-tests/src/test/java/testCases/TC_Auth_001_LoginTest.java
+/Users/frank/claude-projects/LMS/music-lms/music-lms-tests/src/test/java/testCases/TC_Auth_002_SignupTest.java
+/Users/frank/claude-projects/LMS/music-lms/music-lms-tests/src/test/java/testCases/TC_Auth_003_LoginDDT.java
+/Users/frank/claude-projects/LMS/music-lms/music-lms-tests/src/test/java/utilities/DataProviders.java
+/Users/frank/claude-projects/LMS/music-lms/music-lms-tests/src/test/java/utilities/ExcelUtility.java
+/Users/frank/claude-projects/LMS/music-lms/music-lms-tests/src/test/java/utilities/ExtentReportManager.java

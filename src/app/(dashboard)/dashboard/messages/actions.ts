@@ -1,7 +1,9 @@
 'use server';
 
 import { createClient } from '@/lib/supabase/server';
+import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
+import { createNotification } from '../notifications-actions';
 
 export async function getConversations() {
   const supabase = await createClient();
@@ -69,6 +71,13 @@ export async function sendMessage(receiverId: string, content: string) {
 
   if (!user) return { error: 'Unauthorized' };
 
+  // Get sender name for the notification
+  const { data: sender } = await supabase
+    .from('users')
+    .select('full_name')
+    .eq('id', user.id)
+    .single();
+
   const { error } = await supabase
     .from('messages')
     .insert({
@@ -79,8 +88,36 @@ export async function sendMessage(receiverId: string, content: string) {
 
   if (error) {
     console.error('Error sending message:', error);
-    return { error: 'Failed to send message' };
+    return { error: error.message };
   }
 
+  // Trigger notification
+  await createNotification(receiverId, {
+    type: 'message',
+    title: 'New Message',
+    content: `${sender?.full_name || 'Someone'} sent you a message: "${content.substring(0, 50)}${content.length > 50 ? '...' : ''}"`,
+    link: '/dashboard/messages',
+  });
+
+  return { success: true };
+}
+
+export async function clearMessages(contactId: string) {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+
+  if (!user) return { error: 'Unauthorized' };
+
+  const { error } = await supabase
+    .from('messages')
+    .delete()
+    .or(`and(sender_id.eq.${user.id},receiver_id.eq.${contactId}),and(sender_id.eq.${contactId},receiver_id.eq.${user.id})`);
+
+  if (error) {
+    console.error('Error clearing messages:', error);
+    return { error: error.message };
+  }
+
+  revalidatePath('/dashboard/messages');
   return { success: true };
 }
