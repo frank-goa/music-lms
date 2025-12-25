@@ -3,6 +3,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { revalidatePath } from "next/cache";
 import { randomBytes } from "crypto";
+import { headers } from "next/headers";
 
 export async function createInvite(email: string) {
   const supabase = await createClient();
@@ -80,7 +81,11 @@ export async function createInvite(email: string) {
 
   revalidatePath("/dashboard/students");
 
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
+  // Get the host from request headers for dynamic URL generation
+  const headersList = await headers();
+  const host = headersList.get("host") || "localhost:3000";
+  const protocol = headersList.get("x-forwarded-proto") || (host.includes("localhost") ? "http" : "https");
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL || `${protocol}://${host}`;
   const inviteUrl = `${appUrl}/invite/${token}`;
 
   return { inviteUrl };
